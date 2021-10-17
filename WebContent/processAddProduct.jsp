@@ -9,7 +9,7 @@
 	request.setCharacterEncoding("UTF-8");
 
 	String filename="";
-	String realFolder = "C:\\Users\\bae\\eclipse-workspace\\WebMarket\\WebContent\\resources"; // 로컬PC 경로
+	String realFolder = "C:\\Users\\bae\\eclipse-workspace\\WebMarket\\WebContent\\resources\\images"; // 로컬PC 경로
 	int maxSize = 5 * 1024 * 1024; // 최대 업로드될 파일의 크기 5MB
 	String encType = "utf-8"; //인코딩 유형
 	
