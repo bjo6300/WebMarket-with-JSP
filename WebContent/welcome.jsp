@@ -10,11 +10,7 @@
 <title>Test Web Site</title>
 </head>
 <body>
-   <nav class = "navbar navbar-expand navbar-dark bg-dark">
-      <div class="container">
-         <a class = "navbar-brand" href="./welcome.jsp">Home</a>
-      </div>
-   </nav>
+   <%@ include file="menu.jsp" %>
    <%! String greeting = "웹 쇼핑몰에 오신 것을 환영합니다.";
    String tagline = "Welcome to Web Market!";%>
    <div class="jumbotron">
@@ -43,13 +39,13 @@
          		am_pm="PM";
          		hour=hour-12;
          	}
+         	String CT = hour + ":" + minute + ":" + second+ " " + am_pm;
+         	out.println("현재 접속 시각: "+CT+"\n");
          %>
       </div>
       <hr>
    </div>
    </main>
-   <footer class = "container">
-      <p>&copy; WebMarket</p>
-   </footer>
+   <%@ include file="footer.jsp" %>
 </body>
 </html>
