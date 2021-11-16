@@ -1,7 +1,8 @@
 <%@page import="dto.Product"%>
 <%@ page import="dao.ProductRepository" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>    
+    pageEncoding="UTF-8"%>   
+<%@ page errorPage="exceptionNoProductId.jsp" %> 
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session"></jsp:useBean>
 <!DOCTYPE html>
 <html>
@@ -39,10 +40,11 @@
 				<p><b>재고 수 :</b> <%=product.getUnitsInStock() %>
 				<h4><%=product.getUnitPrice() %>원</h4>
 				<p> <a href="#" class="btn btn-info">상품 주문 &raquo;</a>
-					<a href="./product.jsp" class = "btn btn-secondary">상품 목록 &raquo;</a>
+					<a href="./products.jsp" class = "btn btn-secondary">상품 목록 &raquo;</a>
 			</div>
 		</div>	
 		<hr>
 	</div>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
