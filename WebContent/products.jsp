@@ -2,6 +2,7 @@
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Product"%>
 <%@ page import="dao.ProductRepository" %>
+<%@ page import="java.sql.*"%>
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
 
 <html>
@@ -25,13 +26,15 @@
 		<div class="row" align="center">
 			<%@ include file="dbconn.jsp"%>
 			<%
+				//PreparedStatement pstmt = null;   이거 알아서 import됨 왜..?
+				//ResultSet rs = null;
 				String sql = "select * from product";
 				pstmt = conn.prepareStatement(sql);
 				rs = pstmt.executeQuery();
 				while (rs.next()) {
 			%>
 			<div class="col-md-4">
-				<img src="c:/upload/<%=rs.getString("p_fileName")%>"" style="width: 100%">
+				<img src="c:/upload/<%=rs.getString("p_fileName")%>" style="width: 100%">
 				<h3><%=rs.getString("p_name")%></h3>
 				<p><%=rs.getString("p_description")%>
 				<p><%=rs.getString("p_UnitPrice")%>원

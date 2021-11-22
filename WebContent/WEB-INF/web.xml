@@ -14,6 +14,7 @@
  		<error-code>404</error-code>
  		<location>/exceptionNoPage.jsp</location>
  	</error-page>
+ 	
  	<security-role>
 		<description></description >
 		<role-name>admin</role-name>
