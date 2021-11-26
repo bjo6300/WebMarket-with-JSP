@@ -25,7 +25,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-				<img src="c:/upload/<%=rs.getString("p_filename")%>" alt="image"
+				<img src="./resources/images/<%=rs.getString("p_filename")%>" alt="image"
 					style="width: 100%" />
 			</div>
 			<div class="col-md-7">
